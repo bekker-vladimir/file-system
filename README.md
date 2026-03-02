@@ -1,4 +1,4 @@
-# Simple Filesystem Implementation (SU2)
+# Simple Filesystem Implementation 
 
 This project implements a simple user-space filesystem in C++. It provides a basic interface for creating, mounting, and managing a filesystem on a block device. The filesystem handles typical file operations such as opening, reading, writing, and deleting files, all while directly interacting with simulated disk sectors.
 
@@ -19,13 +19,3 @@ This project implements a simple user-space filesystem in C++. It provides a bas
 *   **`tests/`:** Contains various test cases.
     *   Files like `simple_test.inc`, `small_files_test.inc`, `delete_files_test.inc`, etc., used for robustly testing the filesystem.
 *   **`CMakeLists.txt`:** The build configuration file for compiling the application.
-
-## Building and Running
-
-1.  Make sure you have `CMake` and a modern C++ compiler supporting C++20 installed.
-2.  From the project root directory, run the following commands:
-    ```bash
-    cmake .
-    make
-    ./SU2
-    ```
