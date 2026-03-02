@@ -1,4 +1,4 @@
-# Simple Filesystem Implementation 
+# Simple File System Implementation 
 
 This project implements a simple user-space filesystem in C++. It provides a basic interface for creating, mounting, and managing a filesystem on a block device. The filesystem handles typical file operations such as opening, reading, writing, and deleting files, all while directly interacting with simulated disk sectors.
 
