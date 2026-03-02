@@ -4,7 +4,7 @@ This project implements a simple user-space filesystem in C++. It provides a bas
 
 ## Features
 
-*   **Block Device Interface:** Interacts with a simulated block device via sector read and write operations (`TBlkDev`).
+*   **Block Device Interface:** Interacts with a simulated block device via sector read and write operations.
 *   **Superblock & Free Space Management:** Manages filesystem metadata, inodes, and available space dynamically using indirect block addressing.
 *   **Inodes & Block Pointers:** Utilizes an inode structure that holds a file’s direct, single indirect, double indirect, and triple indirect block pointers, supporting extremely large file capacities.
 *   **File Operations:** Supports creating files, reading/writing files sequentially, checking file sizes, and deleting files.
