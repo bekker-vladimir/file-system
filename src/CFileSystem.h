@@ -1,6 +1,8 @@
 #pragma once
+#include <functional>
 
-/* Filesystem size: min 8MiB, max 1GiB
+/**
+ * Filesystem size: min 8MiB, max 1GiB
  * Filename length: min 1B, max 28B
  * Sector size: 512B
  * Max open files: 8 at a time
@@ -9,14 +11,13 @@
  * Max files in the filesystem: 128
  */
 
-#include <functional>
 
 constexpr int FILENAME_LEN_MAX = 28;
 constexpr int DIR_ENTRIES_MAX = 128;
 constexpr int OPEN_FILES_MAX = 8;
 constexpr int SECTOR_SIZE = 512;
-constexpr int DEVICE_SIZE_MAX = (1024 * 1024 * 1024);
-constexpr int DEVICE_SIZE_MIN = (8 * 1024 * 1024);
+constexpr int DEVICE_SIZE_MAX = 1024 * 1024 * 1024;
+constexpr int DEVICE_SIZE_MIN = 8 * 1024 * 1024;
 
 struct File{
     char m_FileName[FILENAME_LEN_MAX + 1];
@@ -65,7 +66,7 @@ private:
     // UFS = SuperBlock, Free space management structures, Table of i-nodes, Data blocks
 
     struct Inode{
-        // since we are not using hard links we can store file name right in the i-node structure
+        // hard links aren't used, file name can be stored right in the i-node structure
         char m_fileName[FILENAME_LEN_MAX + 1];
         size_t m_fileSize;
 
